@@ -1,0 +1,11 @@
+org 100h
+
+mov ah, 08h			; ustaw ah na pobieranie chara od użytkownika
+;mov dx, char		; do dx wrzuć pustego stringa, który
+int 21h				; wywołanie przerwania
+
+
+koniec:
+mov AX, 4C00h
+int 21h
+

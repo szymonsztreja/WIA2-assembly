@@ -1,0 +1,8 @@
+org 100h
+
+mov ax, 5h			; AX = 5h
+mov cx, 5h			; CX = 5h
+mul cx				; AX = AX *  CX => AX = 5h * 5h = 19h
+
+mov AX, 4C00h
+int 21h
