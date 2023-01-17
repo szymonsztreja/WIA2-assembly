@@ -1,0 +1,21 @@
+org 0x100
+
+;(a * b) / (2 * c) = a b * 2 c * /
+
+org 100h
+
+mov  AX, 0001h
+int 33h
+
+
+
+koniec:
+mov AX, 4c00h
+int 21h
+
+onp db "9 7 * 2 4 * / $"
+tekst db "jajco", 0Ah, 0Dh, "$"
+
+
+%include "operacje.asm"
+newOnp db 16h
